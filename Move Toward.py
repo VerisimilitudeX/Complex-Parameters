@@ -1,9 +1,3 @@
-"""
-LESSON: 6.3 - Complex Parameters
-TECHNIQUE 1: Move Toward
-DEMO
-"""
-
 #### ---- LIBRARIES ---- ####
 import random
 import tsk
@@ -15,18 +9,16 @@ pygame.init()
 #### ---- MOVE TOWARDS FUNCTION ---- ####
 #### ------------------------------- ####
 def move_towards(butterfly, vase, speed):
-    # Get start position
+
     x = butterfly.center_x
 
-    # Calculate position
-    if vase.center_x < x:
+    if vase.center_x < x - 2:
         butterfly.flip_x = True
         x -= speed
-    elif vase.center_x > x:
+    elif vase.center_x > x + 2:
         butterfly.flip_x = False
         x += speed
-        
-    # Move butterfly
+
     butterfly.center_x = x
     return
 
@@ -36,7 +28,6 @@ def move_towards(butterfly, vase, speed):
 w = pygame.display.set_mode([1018, 573])
 c = pygame.time.Clock()
 
-# Sprites
 background = tsk.Sprite("Grass.jpg", 0, 0)
 vase = tsk.Sprite("ShortVase.png", 0, 200)
 bug = tsk.Sprite("Butterfly.png", 500, 250)
@@ -45,7 +36,6 @@ bug = tsk.Sprite("Butterfly.png", 500, 250)
 drawing = True
 while drawing:
 
-    # Event loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             drawing = False
@@ -53,14 +43,11 @@ while drawing:
         elif event.type == pygame.MOUSEBUTTONDOWN:
             vase.x = random.choice([0, 848])
 
-    # Move butterfly
     move_towards(bug, vase, .1 * c.get_time())
 
-    # Draw
     background.draw()
     vase.draw()
     bug.draw()
 
-    # Finish
     pygame.display.flip()
     c.tick(30)
