@@ -16,16 +16,18 @@ pygame.init()
 #### ------------------------------- ####
 def move_towards(butterfly, vase, speed):
     # Get start position
-    x = buttefly.center_x
+    x = butterfly.center_x
 
     # Calculate position
     if vase.center_x < x:
+        butterfly.flip_x = True
         x -= speed
     elif vase.center_x > x:
+        butterfly.flip_x = False
         x += speed
         
     # Move butterfly
-    butterly.center_x = x
+    butterfly.center_x = x
     return
 
 #### ---------------------- ####
