@@ -4,7 +4,6 @@ import tsk
 import pygame
 pygame.init()
 
-
 #### --------------------------- ####
 #### ---- RANDOM BACKGROUND ---- ####
 #### --------------------------- ####
@@ -20,7 +19,6 @@ def random_background(background):
         background.image = "SchoolHallway.jpg"
         return "SchoolHallway.jpg"
 
-
 #### ---------------------- ####
 #### ---- MAIN PROGRAM ---- ####
 #### ---------------------- ####
@@ -30,7 +28,6 @@ background = tsk.Sprite("Hills.jpg", 0, 0)
 panda = tsk.Sprite("Panda.png", 100, 100)
 rock = tsk.Sprite("BigMossyRock.png", 400, 20)
 vase = tsk.Sprite("ShortVase.png", 670, 280)
-
 
 #### ---- MAIN LOOP ---- ####
 drawing = True
