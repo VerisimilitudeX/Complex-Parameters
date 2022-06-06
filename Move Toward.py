@@ -25,9 +25,8 @@ def move_towards(butterfly, vase, speed):
         x += speed
         
     # Move butterfly
-
+    butterly.center_x = x
     return
-
 
 #### ---------------------- ####
 #### ---- MAIN PROGRAM ---- ####
