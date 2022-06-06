@@ -24,11 +24,9 @@ def random_background(background):
 #### ---------------------- ####
 #### ---- MAIN PROGRAM ---- ####
 #### ---------------------- ####
-# Setup
 w = pygame.display.set_mode([1018, 573])
 background = tsk.Sprite("Hills.jpg", 0, 0)
 
-# Sprites
 panda = tsk.Sprite("Panda.png", 100, 100)
 rock = tsk.Sprite("BigMossyRock.png", 400, 20)
 vase = tsk.Sprite("ShortVase.png", 670, 280)
@@ -38,17 +36,15 @@ vase = tsk.Sprite("ShortVase.png", 670, 280)
 drawing = True
 while drawing:
 
-    # Event loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             drawing = False
 
         elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             back = random_background(background)
-            #background.image = back
+
             print("The new background is: " + back)
 
-    # Draw
     background.draw()
     rock.draw()
     panda.draw()
