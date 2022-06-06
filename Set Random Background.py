@@ -1,8 +1,3 @@
-"""
-LESSON: 6.3 - Complex Parameters
-WARMUP 1
-"""
-
 #### ---- LIBRARIES ---- ####
 import random
 import tsk
@@ -25,21 +20,17 @@ def random_background():
 #### ---------------------- ####
 #### ---- MAIN PROGRAM ---- ####
 #### ---------------------- ####
-# Setup
 w = pygame.display.set_mode([1018, 573])
 background = tsk.Sprite("Hills.jpg", 0, 0)
 
-# Sprites
 panda = tsk.Sprite("Panda.png", 100, 100)
 rock = tsk.Sprite("BigMossyRock.png", 400, 20)
 vase = tsk.Sprite("ShortVase.png", 670, 280)
-
 
 #### ---- MAIN LOOP ---- ####
 drawing = True
 while drawing:
 
-    # Event loop
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             drawing = False
@@ -50,7 +41,6 @@ while drawing:
             background.image = back
             print("The new background is " + str(back))
 
-    # Draw
     background.draw()
     rock.draw()
     panda.draw()
