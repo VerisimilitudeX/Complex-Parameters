@@ -4,7 +4,6 @@ import tsk
 import pygame
 pygame.init()
 
-
 #### ------------------------------- ####
 #### ---- MOVE TOWARDS FUNCTION ---- ####
 #### ------------------------------- ####
