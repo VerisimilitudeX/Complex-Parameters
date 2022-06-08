@@ -1,8 +1,3 @@
-"""
-LESSON: 6.3 - Complex Parameters
-EXERCISE: Pop Darts
-"""
-
 #### ---- LIBRARIES ---- ####
 import tsk
 import random
