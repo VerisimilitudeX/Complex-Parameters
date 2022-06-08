@@ -172,14 +172,12 @@ while len(draw_deck) > 0 or (len(player_hand) and len(player_hand)):
         card_str_formatted = display_cards([card_str])
         print("Got " + card_str_formatted)
 
-    # Check for Points
     points_earned = check_for_points(player_hand)
     if player_turn:
         player_points += points_earned
     else:
         computer_points += points_earned
 
-    # Switch players
     player_turn = not player_turn
 
     input("(Press enter to continue)")
@@ -188,7 +186,6 @@ while len(draw_deck) > 0 or (len(player_hand) and len(player_hand)):
 
 
 #### ---- FINAL WINNER ---- ####
-# Print final scores
 print("GAME OVER")
 print()
 print("FINAL SCORE:")
@@ -196,11 +193,7 @@ print("   Player: " + str(player_points))
 print("   Computer: " + str(computer_points))
 print()
 
-# Print winners
 if player_points > computer_points:
     print("PLAYER WINS!")
 else:
     print("COMPUTER WINS!")
-
-
-# Turn in your Coding Exercise.
